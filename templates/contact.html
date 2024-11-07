@@ -1,0 +1,88 @@
+<!-- html extender -->
+{% extends "base.html" %}
+
+<!-- extra css block  -->
+{% block extracss %}
+<link rel="stylesheet" href="/static/css/contact.css"/>
+{% endblock extracss %}
+
+<!-- title block -->
+{% block title %}Contact Us{% endblock title %}
+
+<!-- body block -->
+{% block body %}
+
+<!-- message block -->
+{% if messages %}
+<div class="messages">
+    <!-- for loop -->
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" role="alert">
+        <span class="close-btn">&times;</span>
+        {{message}}
+    </div>
+    {% endfor %}
+    <!-- for loop end -->
+</div>
+{% endif %}
+
+<div class="hero-banner">Contact Us</div>
+
+<div class="center-container">
+    <h2>Review Form</h2>
+    <form class="contact-form" method="post" action="/contact">
+        {% csrf_token %}
+
+        <div class="form-input">
+            <label for="contact-form-username">Username</label>
+            <input
+                    type="text"
+                    name="username"
+                    id="contact-form-username"
+                    placeholder="Enter your Username"
+                    autocomplete="username"
+                    required
+            />
+            <!-- oninput="alert('inputted username')" -->
+        </div>
+        <div class="form-input">
+            <label for="contact-form-email">Email</label>
+            <input
+                    type="email"
+                    name="email"
+                    id="contact-form-email"
+                    placeholder="Enter your e-mail"
+                    autocomplete="email"
+                    required
+            />
+        </div>
+        <div class="form-input">
+            <label for="contact-form-phone">Phone No.</label>
+            <input
+                    type="text"
+                    name="phone"
+                    id="contact-form-phone"
+                    placeholder="Enter your Phone No."
+                    autocomplete="tel"
+                    required
+            />
+        </div>
+        <div class="form-input">
+            <label for="contact-form-desc">Description</label>
+            <textarea
+                    name="desc"
+                    id="contact-form-desc"
+                    rows="4"
+                    placeholder="Feel free to type your review or request here"
+                    required
+            ></textarea>
+        </div>
+        <div class="contact-submit-button">
+            <button id="contact-form-submit" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script src="/static/js/base.js"></script>
+
+{% endblock body %}

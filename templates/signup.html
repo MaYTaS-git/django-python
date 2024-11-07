@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/static/css/signup.css"/>
+
+    <title>SignUp</title>
+</head>
+
+<body>
+<!-- message block -->
+{% if messages %}
+<div class="messages">
+    <!-- for loop -->
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" role="alert">
+        <span class="close-btn">&times;</span>
+        {{message}}
+    </div>
+    {% endfor %}
+    <!-- for loop end -->
+</div>
+{% endif %}
+<!-- message block end -->
+<div class="main-container">
+    <div class="main-box">
+        <form method="post" action="/signup">
+            <h1>WebDev SignUp</h1>
+            {% csrf_token %}
+            <div class="signup-username">
+                <label for="username">Username</label>
+                <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Enter Username"
+                        required
+                        autofocus
+                />
+            </div>
+            <div class="signup-pass">
+                <label for="password">Password</label>
+                <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required
+                />
+            </div>
+
+            <div class="signup-btn">
+                <button type="submit">SignUp</button>
+            </div>
+
+            <!-- login option -->
+            <div class="switch-login">
+                <a href="/login">LogIn</a>
+            </div>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="foot-trademarks">
+        <div class="tnc-footer">
+            <a href="#">Terms & Conditions</a>
+            <a href="#"> Privacy policy</a>
+            <a href="#">Trouble logging in?</a>
+        </div>
+        <div class="cprght-footer">
+            <a href="#">Copyright of My Enterprises</a>
+            <a href="#">WebDev is a open source site</a>
+        </div>
+    </div>
+</footer>
+<script src="/static/js/base.js"></script>
+</body>
+</html>

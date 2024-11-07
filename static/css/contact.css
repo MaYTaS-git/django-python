@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* contact us form */
+
+.contact-form {
+  width: 40%;
+  height: 40rem;
+  background-color: rgb(124, 153, 179);
+  border: 0.2rem solid rgb(171, 171, 171);
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.center-container h2 {
+  color: rgba(172, 255, 47, 0.611);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-input label {
+  color: whitesmoke;
+  display: block;
+  width: 100%;
+  margin-left: 10%;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-input input {
+  display: block;
+  width: 70%;
+  margin-left: 10%;
+  height: 2rem;
+  border-radius: 0.3rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 0.1rem solid transparent;
+  font-size: 1rem;
+}
+
+.form-input input:focus-visible {
+  outline: transparent;
+}
+
+.form-input textarea {
+  border: 0.1rem solid transparent;
+  border-radius: 0.3rem;
+  margin-left: 10%;
+  width: 70%;
+  font-size: 1rem;
+  height: 4rem;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  resize: none;
+}
+
+.form-input textarea:focus-visible {
+  outline: transparent;
+}
+
+/* input focus effect */
+.form-input input:focus {
+  border: 0.1rem solid rgb(214, 231, 188);
+  background-color: rgb(208, 228, 237);
+}
+
+.form-input textarea:focus {
+  border: 0.1rem solid rgb(214, 231, 188);
+  background-color: rgb(208, 228, 237);
+}
+
+/* form hover effect */
+.form-input textarea:hover {
+  border: 0.1rem solid greenyellow;
+}
+
+.form-input input:hover {
+  border: 0.1rem solid greenyellow;
+}
+
+/* submit btn */
+.contact-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-form-submit {
+  width: 40%;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: rgb(72, 69, 255);
+  background-color: rgb(0, 195, 255);
+  /* margin-left: 30%; */
+  border-radius: 0.2rem;
+  border: 0.1rem solid transparent;
+}
+
+/* submit btn click effect */
+#contact-form-submit:hover {
+  border: 0.1rem solid rgb(148, 182, 206);
+}
+
+/* submit btn hover effect */
+#contact-form-submit:active {
+  border: 0.1rem solid rgb(83, 158, 212);
+  font-size: 1.4em;
+  color: rgb(79, 138, 239);
+}

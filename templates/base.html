@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/static/css/base.css"/>
+    {% block extracss %}
+    <!-- extra css files added here. -->
+    {% endblock extracss %}
+    <title>{% block title %}{% endblock title %} | webdev</title>
+</head>
+<body>
+<header id="base-header">
+    <nav class="nav-bar">
+        <a href="/" class="nav-brand">WebDev</a>
+        <a href="/" class="nav-bar-option">Home</a>
+        <a href="/products" class="nav-bar-option">Products</a>
+        <a href="/services" class="nav-bar-option">Services</a>
+        <a href="/contact" class="nav-bar-option">Contact</a>
+        <a href="/about" class="nav-bar-option">About</a>
+        <a href="/logout" class="nav-bar-option">Logout</a>
+
+        <div class="nav-search-bar">
+            <input
+                    id="nav-searchbox"
+                    type="text"
+                    value=""
+                    placeholder="Search WebDev"
+            />
+            <button id="nav-searchbtn" type="submit">Search</button>
+        </div>
+    </nav>
+</header>
+
+<main>{% block body %}{% endblock body %}</main>
+
+<footer>
+    <div class="foot-services-panel">
+        <h4>Get started</h4>
+        <ul>
+            <li><a href="/products">View Products offered</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="/services">View Services offered</a></li>
+        </ul>
+    </div>
+
+    <div class="foot-trademarks">
+        <p id="ft-1">Made with Python & Django Framework.</p>
+        <p id="ft-2">
+            © Copyright of WebDev Inc. 2024-2034. WebDev™ is a Trademark of My
+            Enterprises.
+        </p>
+    </div>
+</footer>
+</body>
+</html>

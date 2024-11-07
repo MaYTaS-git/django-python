@@ -1,0 +1,71 @@
+<!-- extending base.html to generate home page -->
+{% extends "base.html" %}
+
+<!-- linking css of home page -->
+<!-- {% block stylecss %}"/static/css/home.css"{% endblock stylecss %} unable to use this. -->
+
+<!-- making title better with current page name associated with it. -->
+{% block title %}Home{% endblock title %}
+
+<!-- body block of the home page -->
+{% block body%}
+<div class="hero-banner">Home Page</div>
+
+<div class="info-heading">
+    <h2>Welcome to WebDev</h2>
+</div>
+
+<div class="info-section">
+    <h3>Products...</h3>
+    <div class="info-card">
+        <div class="ici1 info-card-image"></div>
+        <h4>Product name</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia maxime dolores est qui. Modi aliquam
+            natus laboriosam repellat consequuntur!</p>
+        <a href="/products">Proceed</a>
+    </div>
+    <div class="info-card">
+        <div class="ici2 info-card-image"></div>
+        <h4>Product name</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia maxime dolores est qui. Modi aliquam
+            natus laboriosam repellat consequuntur!</p>
+        <a href="/products">Proceed</a>
+    </div>
+    <div class="info-card">
+        <div class="ici3 info-card-image"></div>
+        <h4>Product name</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia maxime dolores est qui. Modi aliquam
+            natus laboriosam repellat consequuntur!</p>
+        <a href="/products">Proceed</a>
+    </div>
+
+    <h3>Services...</h3>
+    <div class="info-card">
+        <div class="ici4 info-card-image"></div>
+        <h4>Service name</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia maxime dolores est qui. Modi aliquam
+            natus laboriosam repellat consequuntur!</p>
+        <a href="/services">Proceed</a>
+    </div>
+    <div class="info-card">
+        <div class="ici5 info-card-image"></div>
+        <h4>Service name</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia maxime dolores est qui. Modi aliquam
+            natus laboriosam repellat consequuntur!</p>
+        <a href="/services">Proceed</a>
+    </div>
+    <div class="info-card">
+        <div class="ici6 info-card-image"></div>
+        <h4>Service name</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia maxime dolores est qui. Modi aliquam
+            natus laboriosam repellat consequuntur!</p>
+        <a href="/services">Proceed</a>
+    </div>
+
+</div>
+
+<div class="back-to-top">
+    <a href="#">Back to Top</a>
+</div>
+
+{% endblock body %}

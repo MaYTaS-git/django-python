@@ -1,0 +1,43 @@
+# Ignore db.sqlite3 in all subdirectories, except the root directory
+*/db.sqlite3
+
+# Ignore all __pycache__ directories
+**/__pycache__/
+
+# Ignore all migrations folders
+*/migrations/
+
+# Python bytecode
+*.py[cod]
+
+# Django specific
+*.log
+media/
+staticfiles/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files (API keys, secrets, etc.)
+.env
+.env.*
+
+# Coverage directory used by coverage.py
+.coverage
+.coverage.*
+
+# PyCharm project files
+.idea/
+
+# VS Code project files
+.vscode/
